@@ -10,8 +10,7 @@ pipeline {
 
     stage('Docker Build') {
         steps {
-          sh label: '', script: '''\'docker images -a\'
-            
+          sh label: '', script: '''\'docker images node:14-alpine'\'   
                 cd azure-vote/
                 docker images -a
                 docker build -t jenkins-pipeline .
