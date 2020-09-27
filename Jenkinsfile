@@ -10,7 +10,7 @@ pipeline {
 
     stage('Docker Build') {
         steps {
-          sh label: '', script: '''\'docker images \'
+          sh label: '', script: '''\'docker image 'node:7-alphine'\'
             
                 cd azure-vote/
                 docker images -a
